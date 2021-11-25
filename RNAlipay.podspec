@@ -1,6 +1,6 @@
 require "json"
 
-package = JSON.parse(File.read(File.join(__dir__, '..', "package.json")))
+package = JSON.parse(File.read(File.join(__dir__, '.', "package.json")))
 
 Pod::Spec.new do |s|
   s.name         = "RNAlipay"
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => "9.0" }
   s.source       = { :git => "https://github.com/uiwjs/react-native-alipay.git", :tag => "#{s.version}" }
 
-  s.source_files = "**/*.{h,c,m,swift}"
+  s.source_files = "ios/*.{h,c,m,swift}"
   # s.source_files = "**/*.{h,m}"
   s.requires_arc = true
 
