@@ -1,6 +1,6 @@
 require "json"
 
-package = JSON.parse(File.read(File.join(__dir__, '.', "package.json")))
+package = JSON.parse(File.read('./package.json'))
 
 Pod::Spec.new do |s|
   s.name         = "RNAlipay"
@@ -35,7 +35,7 @@ Pod::Spec.new do |s|
 
   s.dependency "React"
   s.resource = 'AlipaySDK.bundle'
-  # s.source_files  = "AlipaySDKiOS/AlipaySDK.framework/**/*"
+  s.source_files  = "AlipaySDKiOS/AlipaySDK.framework/**/*"
   s.vendored_frameworks = 'AlipaySDK.framework'
   s.library = "c++", "z"
   # ...
