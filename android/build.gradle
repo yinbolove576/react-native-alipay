@@ -75,8 +75,8 @@ dependencies {
     implementation 'com.facebook.react:react-native:+'  // From node_modules
 
     // 支付宝 SDK AAR 包所需的配置
-    implementation (name: 'alipaysdk-15.8.03.210428205839', ext: 'aar')
-    // implementation fileTree(dir: "libs", include: ["*.aar"])
+    // implementation (name: 'alipaysdk-15.8.03.210428205839', ext: 'aar')
+    implementation fileTree(dir: "libs", include: ["*.aar"])
 }
 
 def configureReactNativePom(def pom) {
